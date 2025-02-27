@@ -1,5 +1,5 @@
 <?php
-    $nota = 8;
+    $nota = 3;
     $aluno = "Pombinha da Paz";
 
     if ($nota >= 7) {
