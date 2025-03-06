@@ -38,16 +38,18 @@ if (isset($_GET['nota'])) {
 
     $nota = $_GET['nota'];
 
-     $reprovado = $nota < 6;
+     $reprovado = $nota < 6 && $nota >= 0;
      $recuperacao = $nota >= 6 && $nota <= 7;
-     $aprovado = $nota > 7;
-
+     $aprovado = $nota > 7 && $nota <= 10;
+     
     if ($reprovado)
          echo "Reprovado";
     if ($recuperacao)
         echo "Recuperação";
     if ($aprovado)
         echo "Aprovado";
+    else
+        echo "Nota inválida";
        
     ?>
     

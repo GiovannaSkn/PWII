@@ -35,8 +35,8 @@ if (isset($_GET['idade'])) {
     $idade = $_GET['idade'];
 
      $nao = $idade < 16;
-     $opcao = $idade >= 16 && $idade < 18;
-     $sim = $idade >= 18;
+     $opcao = $idade >= 16 && $idade < 18 || $idade >= 70;
+     $sim = $idade >= 18 && $idade < 70;
 
     if ($nao)
          echo "Você não tem idade suficiente";

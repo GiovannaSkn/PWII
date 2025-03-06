@@ -7,7 +7,6 @@
 </head>
 <body>
 <!-- Faça um programa que irá receber o nome de usuário e a senha para fazer login.
-
 - Se nome de usuário for igual ‘Admin’ e senha ‘123’ irá exibir ‘Conectado com sucesso!’, senão irá exibir, ‘Acesso negado! Usuário ou senha incorretos!`. -->
     <form action="exercicio10.php" method="get">
 
@@ -55,7 +54,7 @@ $aceito = $user == "Admin" && $senha == "123";
     if ($aceito)
         echo "Conectado com sucesso!";
     else 
-        echo "Acesso negado usuário ou senha incorretos!";
+        echo "Acesso negado! usuário ou senha incorretos!";
 
     
 

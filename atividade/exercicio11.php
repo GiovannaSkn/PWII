@@ -83,7 +83,7 @@ if (isset($_GET['num3'])) {
 
     //  $lados = $lados > 3 || $lados < 3;
      $triangulo = ($lados == 3);
-     $Isosceles = $num == $num2 || $num == $num3 || $num2 == $num3;
+     $Isosceles = $num == $num2 && $num != $num3|| $num == $num3 && $num2 != $num3 || $num2 == $num3 &&  $num != $num2;
      $escaleno = $num != $num2 && $num != $num3 && $num2 != $num3;
      $equilatero = $num == $num2 && $num2 == $num3 && $num == $num3;
     
@@ -95,7 +95,7 @@ if (isset($_GET['num3'])) {
    
     if ($triangulo && $escaleno)
         echo "Escaleno";
-    if ($triangulo && $equilatero)
+    if ($equilatero)
         echo "Equilátero";
     if ($triangulo && $Isosceles)
         echo "Isósceles";

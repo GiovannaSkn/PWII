@@ -45,42 +45,63 @@ if (isset($_GET['mes'])) {
 
     if ($mes == 'Janeiro') 
         $numero = 1;
+        if ($mes == 'janeiro') 
+        $numero = 1;
 
     if ($mes == 'Fevereiro')
+        $numero = 2;
+        if ($mes == 'fevereiro')
         $numero = 2;
 
     if ($mes == 'Março')
         $numero = 3;
+        if ($mes == 'março')
+        $numero = 3;
 
     if ($mes == 'Abril')
+        $numero = 4;
+        if ($mes == 'abril')
         $numero = 4;
 
     if ($mes == 'Maio')
         $numero = 5;
+        if ($mes == 'maio')
+        $numero = 5;    
 
     if ($mes == 'Junho')
+        $numero = 6;
+        if ($mes == 'junho')            
         $numero = 6;
 
     if ($mes == 'Julho')
         $numero = 7;
+        if ($mes == 'julho')
+        $numero = 7;
 
     if ($mes == 'Agosto')
+        $numero = 8;
+        if ($mes == 'agosto')
         $numero = 8;
 
     if ($mes == 'Setembro')
         $numero = 9;
+        if ($mes == 'setembro') 
+        $numero = 9;
 
     if ($mes == 'Outubro')
+        $numero = 10;
+        if ($mes == 'outubro')
         $numero = 10;
 
     if ($mes == 'Novembro')
         $numero = 11;
+        if ($mes == 'novembro')
+        $numero = 11;
 
     if ($mes == 'Dezembro')
         $numero = 12;
-
-    else
-        echo "Mes invalido";
+        if ($mes == 'dezembro')
+        $numero = 12;
         
     if ($numero <= 6) 
         echo "Esse mes é no primeiro semestre";

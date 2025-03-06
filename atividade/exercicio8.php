@@ -53,15 +53,15 @@ $valor = $_GET['valor'];
 $nao = $valor <= 1000;
 $trinta = $valor > 1000 && $valor <= 2000;
 $vinte = $valor > 2000 && $valor <= 5000;
-$dez = $valor > 5000 && $valor <= 10000;
+$dez = $valor > 5000;
 
 $bvinte = ($valor * 0.20 + $valor); 
-$btrinta = ($valor * 0.30  + $valor); 
-$bdez = ($valor * 0.10  + $valor);
+$btrinta = ($valor * 0.30 + $valor); 
+$bdez = ($valor * 0.10 + $valor);
 
 if ($trinta){
 echo "Vendedor: $nome. <br>";
-echo "#############################################";
+echo "#############################################<br>";
 echo "Total de vendas: $valor. <br>";
 echo "Bonus: 30%.<br>";
 echo "Total a Receber: $btrinta.<br>";
@@ -69,15 +69,15 @@ echo "#############################################";}
 
 if ($vinte){
 echo "Vendedor: $nome. <br>";
-echo "#############################################";
+echo "#############################################<br>";
 echo "Total de vendas: $valor. <br>";
 echo "Bonus: 20%.<br>";
-echo "Total a Receber: $vinte.<br>";
+echo "Total a Receber: $bvinte.<br>";
 echo "#############################################";}
 
 if ($dez){
 echo "Vendedor: $nome. <br>";
-echo "#############################################";
+echo "#############################################<br>";
 echo "Total de vendas: $valor. <br>";
 echo "Bonus: 10%.<br>";
 echo "Total Receber: $bdez.<br>";
@@ -86,7 +86,7 @@ echo "#############################################";}
 
 if ($nao){
 echo "Vendedor: $nome. <br>";
-echo "#############################################";
+echo "#############################################<br>";
 echo "Total de vendas: $valor. <br>";
 echo "Bonus: Sem bonus.<br>";
 echo "Total a Receber: $valor.<br>";

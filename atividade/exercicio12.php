@@ -7,7 +7,6 @@
 </head>
 <body>
 <!-- Faça um programa que irá receber dois valores reais, e um operador (+, -. *, /).
-
 Será realizado o cálculo conforme o operador digitado. Se escolher +, será feito a soma e exibido o resultado da soma, se digitar - será exibido a subtração e assim por diante. -->
     <form action="exercicio12.php" method="get">
 
