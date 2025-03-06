@@ -6,12 +6,12 @@
     <title>Formulários</title>
 </head>
 <body>
-
-    <form action="exercicio1.php" method="get">
+<!-- Elabore um programa que pergunte a idade do usuário, e exiba na tela se ele pode votar ou não. -->
+    <form action="exercicio2.php" method="get">
 
         <fieldset>
-            <legend></legend>
-            <label for="idade">Digite a nota do aluno (0 a 10)</label>
+            <legend>Verificação de Votação</legend>
+            <label for="idade">Digite a sua idade</label>
             <input type="text" name="idade" id="idade" placeholder="0">
             
             <br>
@@ -35,13 +35,13 @@ if (isset($_GET['idade'])) {
     $idade = $_GET['idade'];
 
      $nao = $idade < 16;
-     $opcao = $idade >= 16 && $idade >= 60;
-     $sim = $idade > 18;
+     $opcao = $idade >= 16 && $idade < 18;
+     $sim = $idade >= 18;
 
     if ($nao)
          echo "Você não tem idade suficiente";
     if ($opcao)
-        echo "Você não é obrigado a votar";
+        echo "Você não é obrigado a votar mas pode";
     if ($sim)
         echo "Você é obrigado a votar";
        

@@ -6,7 +6,11 @@
     <title>Formulários</title>
 </head>
 <body>
+<!-- Elabore um programa que irá receber a nota do aluno de 0 a 10, e exiba se o aluno está aprovado, reprovado ou de recuperação.
 
+- Nota < 6 reprovado
+- Nota entre 6 e 7 recuperação
+- Nota > 7 aprovado -->
     <form action="exercicio1.php" method="get">
 
         <fieldset>
