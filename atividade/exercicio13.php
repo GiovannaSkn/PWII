@@ -22,8 +22,8 @@ Exiba se o aluno:
     
     <br>
 
-    <label for="fre">Digite a sua frequência: </label>
-    <input type="text" name="fre" id="fre" placeholder="0">
+    <label for="frequencia">Digite a sua frequência: </label>
+    <input type="text" name="frequencia" id="frequencia" placeholder="0">
 
     <br>
 
@@ -59,8 +59,8 @@ echo 'O nome é obrigatório!';
 } else {
     exit();
 }
-if (isset($_GET['fre'])) {
-    if (empty($_GET['fre'])) {
+if (isset($_GET['frequencia'])) {
+    if (empty($_GET['frequencia'])) {
     echo 'O valor é obrigatório!';
     exit();}
 } else {
@@ -96,20 +96,24 @@ if (isset($_GET['num4'])) {
 }
 
 $nome = $_GET['nome'];
-$frequencia = $_GET['fre'];
+$frequencia = $_GET['frequencia'];
 $num = $_GET['num1'];
 $num2 = $_GET['num2'];
 $num3 = $_GET['num3'];
 $num4 = $_GET['num4'];
 
-$frequencia = $frequencia <= 100;
-$media = (($num1 + $num2 + $num3 + $num4)/4);
-$aprovado = $media >=8 && $frequencia > 75;
+$num = $num <= 10;
+$num2 = $num2 <= 10;
+$num3 = $num3 <= 10;
+$num4 = $num4 <= 10;
+$frequencia = $frequencia <= 100 && $frequencia >= 0;
+$media = ((($num1 + $num2) + ($num3 + $num4))/4);
+$aprovado = $media >= 8 && $frequencia > 75;
 $reprovado = $media < 7 || $frequencia < 75;
 
 if ($aprovado){
-echo "Aluno: $nome. <br>";
-echo "Nota Final: $media. <br>";
+echo "Aluno: $nome.<br>";
+echo "Nota Final: $media.<br>";
 echo "Frequência: $frequencia.<br>";
 echo "Situação: Aprovado";}
 
