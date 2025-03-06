@@ -106,8 +106,8 @@ $num = $num <= 10;
 $num2 = $num2 <= 10;
 $num3 = $num3 <= 10;
 $num4 = $num4 <= 10;
-$frequencia = $frequencia <= 100 && $frequencia >= 0;
-$media = ((($num1 + $num2) + ($num3 + $num4))/4);
+$frequencia = $frequencia <= 100 || $frequencia >= 0;
+$media = ($num1 + $num2 + $num3 + $num4)/4);
 $aprovado = $media >= 8 && $frequencia > 75;
 $reprovado = $media < 7 || $frequencia < 75;
 
